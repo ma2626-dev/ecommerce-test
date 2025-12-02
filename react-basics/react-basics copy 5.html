@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      function Counter() {
+        const [typedText, setTypedText] = React.useState(''); // only what user types
+        const [fullText, setFullText] = React.useState('hello')
+
+        function saveInputText(event) {
+          setTypedText(event.target.value);
+        }
+
+        function resetText() {
+          setTypedText('');
+          setFullText('hello');
+        }
+ 
+        function exampleText() {
+          setFullText('hello Mathew');
+        }
+
+
+        return (
+          <>
+           <input onChange={saveInputText} value={typedText} placeholder="Type a name here" />
+           <button onClick={resetText}>Reset</button>
+           <button onClick={exampleText}>example</button>
+           <p>{fullText} {typedText}</p>
+          </>
+        );
+        
+      }
+      
+      function App() {
+        return (
+          <>
+            <Counter />
+          </>
+        )
+      }
+      
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

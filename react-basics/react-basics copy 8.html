@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock with Hooks</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      function Clock() {
+
+        const [currentTime, setCurrentTime] = React.useState(dayjs())
+
+        React.useEffect(() => {
+          const updateTime = () => {
+            setCurrentTime(dayjs())
+          };
+
+          const intervalId = setInterval(updateTime, 1000);
+
+          return () => {
+            clearInterval(intervalId);
+          };
+        }, [])
+
+        const date = currentTime.format('MMMM D');
+        const time = currentTime.format('HH:mm:ss');
+
+        return (
+        <div>
+          <p>Today is {date}</p>
+          <p>Current time: {time}</p>
+        </div>
+        );
+      }
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Clock />);
+
+    </script>
+  </body>
+</html>

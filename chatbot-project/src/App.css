@@ -1,0 +1,22 @@
+
+      .welcome-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-weight: bold;
+        font-size: 16px;
+        color: rgb(121, 121, 121);
+      }
+
+      .app-container {
+        max-width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      
