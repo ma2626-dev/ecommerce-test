@@ -1,8 +1,10 @@
 import { Link } from 'react-router';
 import { Header } from '../components/Header';
 import './TrackingPage.css';
-
-
+import CartIcon from '../assets/images/icons/cart-icon.png';
+import SearchIcon from '../assets/images/icons/search-icon.png';
+import LogoWhite from '../assets/images/logo-white.png';
+import MobileLogoWhite from '../assets/images/mobile-logo-white.png';
 
 
 
@@ -22,9 +24,9 @@ export function TrackingPage() {
         <div className="left-section">
           <Link to="/" className="header-link">
             <img className="logo"
-              src="images/logo-white.png" />
+              src={LogoWhite} />
             <img className="mobile-logo"
-              src="images/mobile-logo-white.png" />
+              src={MobileLogoWhite} />
           </Link>
         </div>
 
@@ -32,7 +34,7 @@ export function TrackingPage() {
           <input className="search-bar" type="text" placeholder="Search" />
 
           <button className="search-button">
-            <img className="search-icon" src="images/icons/search-icon.png" />
+            <img className="search-icon" src={SearchIcon} />
           </button>
         </div>
 
@@ -43,7 +45,7 @@ export function TrackingPage() {
           </Link>
 
           <Link className="cart-link header-link" to="/checkout">
-            <img className="cart-icon" src="images/icons/cart-icon.png" />
+            <img className="cart-icon" src={CartIcon} />
             <div className="cart-quantity">3</div>
             <div className="cart-text">Cart</div>
           </Link>

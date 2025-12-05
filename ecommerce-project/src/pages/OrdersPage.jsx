@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import { TrackingPage } from './TrackingPage';
 import { Header } from '../components/Header';
 import './OrdersPage.css';
+import BuyAgain from '../assets/images/icons/buy-again.png';
 
 
 
@@ -55,7 +55,7 @@ export function OrdersPage() {
                   Quantity: 1
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain} />
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
@@ -83,7 +83,7 @@ export function OrdersPage() {
                   Quantity: 2
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain} />
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
@@ -134,7 +134,7 @@ export function OrdersPage() {
                   Quantity: 2
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain} />
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
