@@ -2,10 +2,10 @@ import { Header } from '../components/Header';
 import './NotFoundPage.css';
 
 
-export function NotFoundPage() {
+export function NotFoundPage({ cart }) {
   return (
     <>
-      <Header />
+      <Header cart={cart}/>
       
       <div className="not-found-message"></div>
     </>
